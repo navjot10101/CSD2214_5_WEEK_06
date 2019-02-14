@@ -14,19 +14,43 @@
 
             document.write(sum);
         }*/
-        function addNumbers(countUpTo) {
+        /*function addNumbers(countUpTo) {
             sum = 0; i = 0;
             while (i < countUpTo) {
                 sum += i++;
             }
             return sum;
+        }*/
+        rows = prompt("How many rows for your multiplication table?");
+        cols = prompt("How many columns for your multiplication table?");
+        if (rows == "" || rows == null)
+            rows = 10;
+        if (cols == "" || cols == null)
+            cols = 10;
+        createTable(rows, cols);
+        function createTable(rows, cols) {
+            j = 1;
+            output = "<table='1' width='500' cellspacing='0' cellpadding='5'";
+            for (i = 1; i <= rows; i++) {
+                output += "<tr>";
+                while (j <= cols) {
+                    output += "<td>" + i * j + "</td>";
+                    j++;
+                }
+                
+                output += "</tr></br>";
+                j = 1;
+            }
+            output += "</table>";
+            document.write(output);
+
         }
     </script>
 </head>
 <body>
     <script>
-        var input = prompt("Input your number");
-        document.write(addNumbers(input));
+        /*var input = prompt("Input your number");
+        document.write(addNumbers(input));*/
     </script>
     <script src="js/main.js"></script>
 </body>
