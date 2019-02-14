@@ -62,7 +62,7 @@
             inputs[3] = document.getElementById('uid').value;
             inputs[4] = document.getElementById('password').value;
             inputs[5] = document.getElementById('confirm').value;
-            erorrs = new Array();
+            errors = new Array();
             errors[0] = "<span style='color:red'>Please enter your first name!</span>";
             errors[1] = "<span style='color:red'>Please enter your last name!</span>";
             errors[2] = "<span style='color:red'>Please enter your email!</span>";
@@ -76,7 +76,7 @@
                     document.getElementById(div).innerHTML = errMessage;
                 else if (i == 2) {
                     atpos = inputs[i].indexOf("@");
-                    dotpos = inputs[i].lastindexOf(".");
+                    dotpos = inputs[i].lastIndexOf(".");
                     if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= inputs[i].length)
                         document.getElementById('errEmail').innerHTML = "<span style ='color:red'>Enter a valid email address!</span>";
                     else
