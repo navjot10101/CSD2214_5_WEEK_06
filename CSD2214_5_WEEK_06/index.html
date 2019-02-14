@@ -21,6 +21,9 @@
             }
             return sum;
         }*/
+
+        /*Table
+         *
         rows = prompt("How many rows for your multiplication table?");
         cols = prompt("How many columns for your multiplication table?");
         if (rows == "" || rows == null)
@@ -37,21 +40,40 @@
                     output += "<td>" + i * j + "</td>";
                     j++;
                 }
-                
+
                 output += "</tr></br>";
                 j = 1;
             }
             output += "</table>";
             document.write(output);
+            */
+
+
+        function trigger() {
+            document.getElementById("hover").addEventListener("mouseover", popup);
+            function popup() {
+                alert("welcome to my webpage!!");
+            }
 
         }
     </script>
+    <style>
+        p {
+            font-size: 50px;
+            position: fixed;
+            left: 550px;
+            top: 300px;
+        }
+    </style>
+    }
+  
 </head>
-<body>
+<body onload="trigger();">
     <script>
-        /*var input = prompt("Input your number");
-        document.write(addNumbers(input));*/
+                /*var input = prompt("Input your number");
+                document.write(addNumbers(input));*/
     </script>
+    <p id="hover">Welcome!!</p>
     <script src="js/main.js"></script>
 </body>
 </html>
