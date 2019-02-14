@@ -4,9 +4,30 @@
     <meta charset="utf-8" />
     <title>CSD2214_5_WEEK_06</title>
     <link href="css/default.css" rel="stylesheet" />
+    <script>
+        /*function addNumbers(countUpTo) {
+            sum = 0;
+            for (i = 0; i < countUpTo; i++) {
+                sum += i;
+            }
+            return sum;
+
+            document.write(sum);
+        }*/
+        function addNumbers(countUpTo) {
+            sum = 0; i = 0;
+            while (i < countUpTo) {
+                sum += i++;
+            }
+            return sum;
+        }
+    </script>
 </head>
 <body>
-    <div>Content goes here!</div>
+    <script>
+        var input = prompt("Input your number");
+        document.write(addNumbers(input));
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
